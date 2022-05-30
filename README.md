@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -10,25 +8,77 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### What is Next.js ?
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- The React Framework for Production
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### React
 
-## Learn More
+- Not quite possible to build a full feature rich application ready to be deployed for production
+- now if you think about building applications with just react
+- you know that it's not quite possible to build a full feature-rich application ready to be deployed for production
+- react is a library for building user interfaces
+- it is responsible for only the view layer of an application and you as the developer have to make decisions on other features of the app
+- for example how would you implement routing, styling authentication etc
 
-To learn more about Next.js, take a look at the following resources:
+### Next.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- next.js on the other hand is a react framework
+- so it is a package that uses react for building user interfaces
+- but it also comes loaded with a lot more features that enable you to build full-fledged production ready applications
+- features exactly like routing, styling, authentication, bundle optimization etc
+- there's no need to install additional packages
+- next.js provides everything for you
+- you do have to keep in mind though that next.js living true to the name of being a framework does have opinions and conventions which need to be followed to implement the above set features
+- however we don't have to worry much about that as there are conventions that have emerged from a team with years of experience writing react apps for production
+- so to reiterate next.js is a react framework for building production ready applications
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### Why learn Next.js ?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- all right now that we know what next.js is let's see why you might want to learn it
+- the why again stems from the fact that next.js simplifies the process of building a react application for production
+- let me list down some of the noteworthy features which you would probably want in a react application which next js provides out of the box
+  1. File based routing
+     - when building a react app you need to install a third-party routing package configure it and add code every time you need to create a route
+     - next js provides what is known as file based routing to simplify this task
+  2. Pre-rendering
+     - this means that next js generates html for each page in advance
+     - instead of having it all done by client-side javascript
+     - pre-rendering can result in better performance and seo which is something we all want
+  3. API routes
+     - and this might be a surprise to most of you
+     - but let me tell you that you can create apis with next js
+     - so next js is really a full stack framework if you think about it
+     - you can write the frontend code in react but also write apis that can be called by the react app
+     - next js also supports css modules which saves you the time of choosing a css library
+     - of course you are allowed to use a css framework like tailwind or even a css in js library like style components for example
+     - but next js supports css modules out of the box
+  4. Authentication
+     - next js supports multiple authentication patterns
+     - each designed for different use cases
+  5. Dev and Prod build system
+     - and a well optimized production build system so that you can focus more on the code and less on the configuration
+  - it is a culmination of all these features which makes nextgs an amazing framework to work with
+  - and if you haven't guessed already these are the features you're going to learn in detail throughout the series
+  - also just so you know i might refer to next js as just next many times in the series so please don't get confused
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+### Pre-requisites
+
+- now then what are the prerequisites to get started with next.js
+- html css and javascript fundamentals are absolutely necessary
+- we will be making use of es6 plus
+- so make sure you have an understanding of the modern javascript features as well
+- next js a react framework which implies you also need to have a solid understanding of react fundamentals
+- you don't have to be an expert by any means but concepts like function components props state jsx hooks and so on are required
+
+---
+
+## Reference
+
+- [Next.js Tutorial for Beginners](https://www.youtube.com/playlist?list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH)
