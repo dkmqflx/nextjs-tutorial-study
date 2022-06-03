@@ -8,3 +8,5 @@ function ProductDetail() {
 }
 
 export default ProductDetail;
+
+// folder name으로 nested dynamics routes
