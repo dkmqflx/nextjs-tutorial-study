@@ -75,7 +75,7 @@ yarn start
      - each designed for different use cases
   5. Dev and Prod build system
      - and a well optimized production build system so that you can focus more on the code and less on the configuration
-  - it is a culmination of all these features which makes nextgs an amazing framework to work with
+  - it is a culmination of all these features which makes next.js an amazing framework to work with
   - and if you haven't guessed already these are the features you're going to learn in detail throughout the series
   - also just so you know i might refer to next js as just next many times in the series so please don't get confused
 
