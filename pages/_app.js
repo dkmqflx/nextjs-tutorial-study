@@ -3,9 +3,20 @@ import '../styles/globals.css';
 // 그래서 모든 페이지에 적용된다
 import 'bootstrap/dist/css/bootstrap.min.css';
 // using bootstrap class
+import { ThemeProvider } from 'styled-components';
+
+const theme = {
+  colors: {
+    primary: '#355C7D',
+  },
+};
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;
