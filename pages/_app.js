@@ -1,22 +1,23 @@
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 import '../styles/globals.css';
-// global style이 이 파일에 import 해서 적용되어 있다.
-// 그래서 모든 페이지에 적용된다
-import 'bootstrap/dist/css/bootstrap.min.css';
-// using bootstrap class
-import { ThemeProvider } from 'styled-components';
-
-const theme = {
-  colors: {
-    primary: '#355C7D',
-  },
-};
+import '../styles/layout.css';
 
 function MyApp({ Component, pageProps }) {
+  // Component.getLayout가 있는 경우 아래가 return 된다
+  if (Component.getLayout) {
+    return Component.getLayout(<Component {...pageProps} />);
+  }
+
   return (
-    <ThemeProvider theme={theme}>
+    <>
+      <Header />
       <Component {...pageProps} />
-    </ThemeProvider>
+      <Footer />
+    </>
   );
 }
+
+// 모든 페이지에 header와 footer가 적용되어 있다
 
 export default MyApp;
