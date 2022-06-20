@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Footer from '../components/Footer';
+import Footer from '../components/layout/Footer';
 
 // 필요한 head 태그 관련된 태그 추가할 수 있다
 // 하지만 해당 페이지에만 적용된다
