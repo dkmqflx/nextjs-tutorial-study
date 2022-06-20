@@ -18,7 +18,14 @@ function Blog({ title, description }) {
 
 export default Blog;
 
-export async function getServerSideProps() {
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { blogId: '1' } }],
+    fallback: false,
+  };
+}
+
+export async function getStaticProps() {
   const user = process.env.DB_USER;
   const password = process.env.DB_PASSWORD;
   console.log(`Connecting to database with username ${user} and password ${password}`);
