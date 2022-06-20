@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import '../styles/globals.css';
@@ -9,8 +10,14 @@ function MyApp({ Component, pageProps }) {
     return Component.getLayout(<Component {...pageProps} />);
   }
 
+  // 모든 페이지에 head 관련 태그 적용되게 하려면 _app.js에서 정의해준다
+
   return (
     <>
+      <Head>
+        <title>Codevolution</title>
+        <meta name="description" content="Awesome YouTube channel" />
+      </Head>
       <Header />
       <Component {...pageProps} />
       <Footer />

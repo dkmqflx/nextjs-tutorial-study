@@ -1,7 +1,19 @@
+import Head from 'next/head';
 import Footer from '../components/Footer';
 
+// 필요한 head 태그 관련된 태그 추가할 수 있다
+// 하지만 해당 페이지에만 적용된다
+
 function About() {
-  return <h1 className="content">About</h1>;
+  return (
+    <>
+      <Head>
+        <title>About Codevolution</title>
+        <meta name="description" content="Free tutorials on web development" />
+      </Head>
+      <h1 className="content">About</h1>;
+    </>
+  );
 }
 
 export default About;
