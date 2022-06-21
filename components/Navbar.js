@@ -1,4 +1,7 @@
 import Link from 'next/link';
+// import { signIn, signOut } from 'next-auth/client';
+import { signIn, signOut } from 'next-auth/react';
+// 자동으로 signIn, signOut으로 가게 해준다
 
 function Navbar() {
   return (
@@ -22,16 +25,31 @@ function Navbar() {
             <a>Blog</a>
           </Link>
         </li>
-        \
+
         <li>
-          <Link href="#">
-            <a>Sign In</a>
+          <Link href="/api/auth/signin">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                // signIn();
+                signIn('github'); // 자동으로 토큰이 생긴다.
+              }}
+            >
+              Sign In
+            </a>
           </Link>
         </li>
-        \
+
         <li>
-          <Link href="#">
-            <a>Sign Out</a>
+          <Link href="/api/auth/signout">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                signOut();
+              }}
+            >
+              Sign Out
+            </a>
           </Link>
         </li>
       </ul>
