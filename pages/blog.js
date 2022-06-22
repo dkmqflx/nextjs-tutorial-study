@@ -14,11 +14,12 @@ export async function getServerSideProps(context) {
 
   console.log({ session });
 
+  // 74. Securing Pages Server-side
   if (!session) {
     return {
       redirect: {
         destination: '/api/auth/signin?callbackUrl=http://localhost:3000/blog',
-        permanent: false,
+        permanent: false, // this redirect is not permanent and is applicable only if the useris not loged in
       },
     };
   }
