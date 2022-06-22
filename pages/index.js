@@ -3,8 +3,6 @@ import { useSession } from 'next-auth/react';
 function Home() {
   const { data, status } = useSession();
 
-  console.log({ data, status });
-
   return <h2>Home Page</h2>;
 }
 
